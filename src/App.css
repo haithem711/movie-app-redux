@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+ color:white;
+ background-color: black;
+}
+.movies-search{
+  width:500px ; 
+  height:50px;
+
+  outline: none;
+  
+  font-size: 20px;
+}
+.description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-description{
+  width:200px ; 
+  height:40px;
+  color:red;
+background-color: white;
+  outline: none;
+  margin:5px;
+  font-size: 16px;
+}
+.movie-edit{
+  width:100px ; 
+  height:40px;
+  color:white;
+background-color: red !important;
+  outline: none;
+  margin:5px;
+  font-size: 16px;
+}
+.edit-remove{
+  display: flex;
+}
+body{
+  background-color: black;
+}
+.black{
+  background-color: black;
+  outline: none;
+}
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width:70%;
+  margin: auto;
+  padding-top: 20px;
+}
+.movies-section {
+  display: flex;
+ 
+ width:70%;
+ margin: auto;
+flex-wrap: wrap;
+}
+.movies-bloc {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  margin: 20px;
+  
+  box-shadow: 15px -19px 47px -9px rgba(181,172,181,0.72);
+ 
+  list-style-type: none;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+}
+.plus{
+  background-color: red !important;
+  outline: none !important;
+}
+.movies-name {
+  display: flex ;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 28px;
+  color:red;
+}
+.movies-img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  width:270px;
+  height:300px;
+ 
+}
+
+.label-modal{
+  width:180px;
+  font-size: 18px;
+  color:#6c757e;
+}
+.movies-year{
+  color:white;
+  display: flex;
+  justify-content: center;
+}
+.align-modal{
+  display: flex;
+  justify-content: space-around;
+  width:70%;
+  margin-top: 10px;
+}
+.button-search{
+  background-color: red;
+  color:white;
+
+   outline: none;
+   border:none;
+   font-size: 20px;
+   cursor: pointer;
+   width:100px;
+   height:50px;
+ }
+ .add-movie{
+   width:270px ;
+   height: 300px;
+   border:1px solid black;
+   background-color: black;
+   margin: 20px;
+   border-radius: 8px;
+   box-shadow: 15px -19px 47px -9px rgba(181,172,181,0.72);
+ outline: none;
+ }
+.rate-stars{
+  color: white
+}
+ .rating{
+   display: flex;
+   flex-direction: column;
+ }
+ .container{
+   display: flex;
+   flex-wrap: wrap;
+  justify-content: center;
+   align-items: center;
+ }
