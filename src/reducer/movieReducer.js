@@ -66,7 +66,7 @@ const MovieReducer = ( state = {MoviesDescription: description,keyword:"", ratin
         case SEARCH_MOVIE:
           return {
             ...state,
-            MoviesDescription: description.filter(el => el.rating >= action.payload.rating && el.title.toLowerCase().includes(action.payload.title.toLowerCase().trim() )  )
+            MoviesDescription: description.filter(el =>   el.title.toLowerCase().includes(action.payload.title.toLowerCase().trim() )  )
           }
           case REMOVE_MOVIE:
           return {
@@ -78,6 +78,11 @@ const MovieReducer = ( state = {MoviesDescription: description,keyword:"", ratin
             ...state,
             MoviesDescription:state.MoviesDescription.map(el => el.id === action.payload.id?action.payload:el) 
           }
+          case  SET_RATE:
+            return {
+              ...state,
+              rating : action.payload
+            }
         
         default : return state ;
     }

@@ -51,7 +51,7 @@ class DescriptionMovies extends Component {
     };
     const mapStateToProps = state => {
         return {
-          movies: state.MovieReducer.MoviesDescription
+          movies: state.movie.MoviesDescription
         };
       };
     export default connect(mapStateToProps)(DescriptionMovies);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { search } from '../actions/actions'
-
+import StarRatingComponent from 'react-star-rating-component';
 
 class Rating extends Component{
     constructor(props){

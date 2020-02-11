@@ -4,18 +4,27 @@ import uuid from "uuid";
 import Rating from "./Rating";
 import { search } from '../actions/actions'
 import {connect} from 'react-redux'
+import StarRatingComponent from 'react-star-rating-component';
+import{setRate} from '../actions/actions'
+
 
 class Header extends React.Component {
     constructor(props){
   super(props);
   this.state = {
-    title : ''
+    title : '',
+    rating : 1
   }
   }
-   
+   onStarClick(nextValue, prevValue, name) {
+      this.setState({rating: nextValue});
+      this.props.setRate(nextValue)
+    }
     
-    
+
   render(){
+    
+   
     return (
       <div className="header">
         <div>
@@ -29,7 +38,13 @@ class Header extends React.Component {
           <input className="button-search" type="button" value="Search" />
         </div>
         <div className="rating" >
-          <span>Minimum rating</span>
+          <span> 
+            <StarRatingComponent 
+          name="rate1" 
+          starCount={5}
+          value={this.state.rating}
+          onStarClick={this.onStarClick.bind(this)}
+        />Minimum rating</span>
           <Rating title={this.state.title} rating={this.props.rating} setRate={x => this.props.setRate(x)}/>
           
         </div>
@@ -39,7 +54,8 @@ class Header extends React.Component {
   };
   const mapDispatchToProps = dispatch => {
     return {
-      searchMovie: x => dispatch(search(x))
+      searchMovie: x => dispatch(search(x)),
+      setRate:x=>dispatch(setRate(x))
     }
   }
   export default connect(null, mapDispatchToProps)(Header);

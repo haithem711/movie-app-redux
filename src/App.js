@@ -17,6 +17,7 @@ class App extends React.Component{
     keyword:"",
     rating: 1
   }
+  console.log(props.movies)
 }
 search = (keyword) =>{
  
@@ -39,7 +40,7 @@ addNewMovie = movie => {
     <div className="App">
       <Header rating={this.state.rating} setRate={x => this.setRate(x)} search={x => this.search(x)} />
       <div className="movies-section">
-          <Movies text={this.state.keyword} rating={this.state.rating} addNewMovie={x => this.addNewMovie(x)} data={this.props.movies} /> 
+          <Movies text={this.state.keyword} rating={this.state.rating} addNewMovie={x => this.addNewMovie(x)} data={this.props.movies.MoviesDescription} /> 
           
          
         </div>
@@ -52,7 +53,7 @@ addNewMovie = movie => {
 
 const mapStateToProps = state => {
   return {
-    movies: state.MoviesDescription
+    movies: state.movie
   };
 };
 
